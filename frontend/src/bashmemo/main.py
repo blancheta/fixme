@@ -8,10 +8,12 @@ import webbrowser
 import click
 import requests
 
-from frontend.src.bashmemo.config import domain
-from frontend.src.bashmemo.utils import autodiscover_most_used_commands, create_bookmark
+
 
 import subprocess
+
+from src.bashmemo.config import domain
+from src.bashmemo.utils import autodiscover_most_used_commands, create_bookmark
 
 commands = []
 

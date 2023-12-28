@@ -1,5 +1,5 @@
-env = 'prod'
+env = 'dev'
 if env == 'dev':
-    domain = "http://www.bashmemo.com:8000"
+    domain = "http://localhost:8000"
 else:
     domain = "https://memo.pythonmentoring.com"

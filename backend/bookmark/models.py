@@ -56,11 +56,11 @@ class Organisation(models.Model):
 
 
 class User(AbstractUser):
-    public_id = models.UUIDField(
-        default=uuid4,
-        editable=False,
-        unique=True,
-    )
+    # public_id = models.UUIDField(
+    #     default=uuid4,
+    #     editable=False,
+    #     unique=True,
+    # )
     email = models.EmailField(unique=True)
     bookmarks = GenericRelation(Bookmark)
     organisation = models.ForeignKey(Organisation, null=True, on_delete=models.SET_NULL)

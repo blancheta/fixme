@@ -4,7 +4,7 @@ import requests
 from rich.console import Console
 from rich.table import Table
 
-from frontend.src.bashmemo.config import domain
+from src.bashmemo.config import domain
 
 
 def autodiscover_most_used_commands():
