@@ -17,16 +17,11 @@ from src.bashmemo.utils import autodiscover_most_used_commands, create_bookmark
 
 commands = []
 
-parser = argparse.ArgumentParser(
-                    prog = 'Bashmemo',
-                    description = 'Second brain to remind commands',
-                    epilog = '')
-parser.add_argument('-b', '--bookmark', action='store_true')
-parser.add_argument('-ad', '--autodiscover')
 
 
-def run():
-    args = parser.parse_args()
+
+def run(args):
+
     autodiscover = args.autodiscover
     bookmark = args.bookmark
 
@@ -114,8 +109,5 @@ def run():
 
         subprocess.run(command_parts)
 
-
-if __name__ == '__main__':
-    run()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
