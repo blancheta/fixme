@@ -21,7 +21,8 @@ setopt EXTENDED_HISTORY
 
 Bookmark a command for further use in your career
 ```
-bm -b "your command"
+python run.py -b
+python run.py --bookmark
 Any keywords to find back this command? (separated by empty space): aws list
 ```
 
