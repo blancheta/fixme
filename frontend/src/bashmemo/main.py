@@ -32,7 +32,7 @@ def run(args):
         raise click.ClickException('filename argument and option string are mutually exclusive!')
 
     # Getting back token if existing else displaying link to connect with github
-    token_file_path = "/tmp/token.pickle"
+    token_file_path = "token.pickle"
     if exists(token_file_path):
         pickle_in = open(token_file_path, "rb")
         token = pickle.load(pickle_in)
@@ -43,7 +43,7 @@ def run(args):
         time.sleep(3)
         webbrowser.open(f"{domain}/accounts/github/login")
         token = input("Token: ")
-        pickle_in = open("/tmp/token.pickle", "wb")
+        pickle_in = open("token.pickle", "wb+")
         pickle.dump(token, pickle_in)
 
     print("Sync local with cloud ...")
@@ -53,7 +53,7 @@ def run(args):
     })
     if response.status_code != 200:
         print("Invalid token: Please retry")
-        os.remove("/tmp/token.pickle")
+        os.remove("token.pickle")
         exit()
 
     user_id = response.json()['user']['id']
