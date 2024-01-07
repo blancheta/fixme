@@ -107,7 +107,9 @@ def run(args):
 
         print(execute_command)
 
-        subprocess.run(command_parts)
-
+        try:
+            subprocess.run(command_parts)
+        except FileNotFoundError:
+            print("Please install this program locally before using it")
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
