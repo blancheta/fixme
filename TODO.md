@@ -29,9 +29,9 @@ We identified the following bugs on the application.
 
 #### [ ] 1 - BACKEND: Site matching query does not exit
 #### [ ] 2 - BACKEND: No such column
-#### [ ] 3 - FRONTEND: Redirect to prod instead of local backend server
-#### [ ] 4 - FRONTEND: Raise error if local command does not exist, should return "Please install this program locally before using it"
-#### [ ] 5 - FRONTEND: Cannot save a command bookmarked
-#### [ ] 6 - FRONTEND: Cannot see a command bookmarked when search by keyword after creating it
+#### [X] 3 - FRONTEND: Redirect to prod instead of local backend server
+#### [X] 4 - FRONTEND: Raise error if local command does not exist, should return "Please install this program locally before using it"
+#### [X] 5 - FRONTEND: Cannot save a command bookmarked
+#### [X] 6 - FRONTEND: Cannot see a command bookmarked when search by keyword after creating it
 "Command bookmark has not been created because of an error"
 #### [ ] 7 - Wait 2 seconds instead of 3 before opening webpage to login

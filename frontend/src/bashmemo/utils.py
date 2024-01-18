@@ -54,7 +54,7 @@ def create_bookmark(command: str, keywords_input: str, user_id, token) -> bool:
     keywords = keywords_input.split(" ")
     payload = {
         "command": command,
-        "keywords": [{"name": keyword} for keyword in keywords],
+        "keywords": [keyword for keyword in keywords],
         "object_id": user_id
     }
     response = requests.post(

@@ -8,8 +8,6 @@ import webbrowser
 import click
 import requests
 
-
-
 import subprocess
 
 from src.bashmemo.config import domain
@@ -18,10 +16,7 @@ from src.bashmemo.utils import autodiscover_most_used_commands, create_bookmark
 commands = []
 
 
-
-
 def run(args):
-
     autodiscover = args.autodiscover
     bookmark = args.bookmark
 
@@ -69,6 +64,8 @@ def run(args):
         else:
             print("Command Bookmark saved. Oh yeah!")
     else:
+        # import pdb;pdb.set_trace()
+
         keywords = input("bm-i-search (keywords separated by space): ")
         keywords = keywords.split(" ")
         commands_selection = []
@@ -76,7 +73,8 @@ def run(args):
         for command in commands:
             cond = []
             for keyword in keywords:
-                cond.append( keyword in command['command'] or keyword in command['keywords'])
+                kw_db = [keyword.lower() for keyword in command['keywords']]
+                cond.append(keyword in [word for word in kw_db] or keyword in command['command'])
 
             if all(cond):
                 commands_selection.append(command["command"])
