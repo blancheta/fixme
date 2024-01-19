@@ -73,8 +73,8 @@ def run(args):
         for command in commands:
             cond = []
             for keyword in keywords:
-                kw_db = [keyword.lower() for keyword in command['keywords']]
-                cond.append(keyword in [word for word in kw_db] or keyword in command['command'])
+                command_keywords = [keyword.lower() for keyword in command['keywords']]
+                cond.append(keyword in [word for word in command_keywords] or keyword in command['command'])
 
             if all(cond):
                 commands_selection.append(command["command"])
