@@ -40,7 +40,7 @@ def run(args):
         # try to validate the token via the api
         print(f"Please Log in here: {domain}/accounts/github/login")
         print("Redirecting you to Login page ...")
-        time.sleep(3)
+        time.sleep(2)
         webbrowser.open(f"{domain}/accounts/github/login")
         token = input("Token: ")
         pickle_in = open("token.pickle", "wb+")
